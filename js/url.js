@@ -7,17 +7,15 @@
 $('#encode-button').on('click', function() {
 
     //URLフォームから値を取得
-    var URL = $('URLForm').val()
-    alert(URL)
+    var URL = $('#URLForm').val()
     console.log(URL)
     
     //URLエンコード
-    var encodeData = encodeURL(URL)
-    alert(encodeData)
+    var encodeData = encodeURI(URL)
     console.log(encodeData)
 
     //Encoded URLの値を設定
-    $('encodedURL-text').innerText(encodeData);
+    $('#encodedURL-text').val(encodeData);
     });
 
 
@@ -25,15 +23,13 @@ $('#encode-button').on('click', function() {
 $('#decode-button').on('click', function() {
 
     //URLフォームから値を取得
-    var URL = $('URLForm').val()
-    alert(URL)
+    var URL = $('#URLForm').val()
     console.log(URL)
 
     //URLデコード
-    var decodeData = decodeURL(URL)
-    alert(decodeData)
+    var decodeData = decodeURI(URL)
     console.log(decodeData)
 
     //Decoded URLの値を設定
-    $('decodedURL-text').innerText(decodeData);
+    $('#decodedURL-text').val(decodeData);
 });
