@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>超簡単URLデコード&エンコード</title>
+</head>
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<body>
+
+    <div class="jumbotron">
+  <h1>URL Tool</h1>
+  <p>URLのデコード&エンコードを実施するだけの超シンプルなWebサイトです</p>
+  <p>強いて特徴を上げるのであれば、JavaScriptで実装しているので、Webサーバとの通信なしで高速で動作します</p>
+
+  <p>思いついた機能を追加していけたらなと考えてます</p>
+
+</div>
+    <form class="form-horizontal">
+  <fieldset>
+    <legend>URL-Decode-Encode</legend>
+
+    <!-- URL入力フォーム-->
+    <div class="form-group">
+      <label for="textArea" class="col-lg-2 control-label">URL</label>
+      <div class="col-lg-8">
+        <textarea class="form-control" rows="6" id="URLForm"></textarea>
+        <span class="help-block">Please input URL</span>
+      </div>
+    </div>
+
+    <!-- URL変換ボタン-->
+    <div class="form-group">
+        <div class="col-lg-10 col-lg-offset-2">
+            <a id="decode-button" class="btn btn-primary btn-lg">URL Decode</a>
+            <a id="encode-button" class="btn btn-success btn-lg">URL Encode</a>
+        </div>
+    </div>
+
+    <!-- Decode URL-->
+    <div class="form-group">
+      <label for="textArea" class="col-lg-2 control-label">Decoded URL</label>
+      <div class="col-lg-8">
+        <textarea class="form-control" rows="6" id="decodedURL-text"></textarea>
+        <span class="help-block"></span>
+      </div>
+    </div>
+
+    <!-- Encode URL-->
+    <div class="form-group">
+      <label for="textArea" class="col-lg-2 control-label">Encoded URL</label>
+      <div class="col-lg-8">
+        <textarea class="form-control" rows="6" id="encodedURL-text"></textarea>
+        <span class="help-block"></span>
+      </div>
+    </div>
+
+  </fieldset>
+</form>
+
+
+</body>
+
+<!--外部JavaScript呼び出し-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/url.js" ></script>
+
+</html>
