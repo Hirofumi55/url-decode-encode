@@ -18,10 +18,6 @@
   <p>URLのデコード&エンコードを実施するだけの超シンプルなWebサイトです</p>
   <p>強いて特徴を上げるのであれば、JavaScriptで実装しているので、Webサーバとの通信なしで高速で動作します</p>
 
-  <!--
-  <p>思いついた機能を追加していけたらなと考えてます</p>
-  -->
-
 </div>
     <form class="form-horizontal">
   <fieldset>
@@ -36,11 +32,18 @@
       </div>
     </div>
 
+    <!-- Decode&Encodeボタン-->
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <a id="super-button" class="btn btn-info btn-lg">Decode & Encode</a>
+      </div>
+    </div>
+
     <!-- URL変換ボタン-->
     <div class="form-group">
         <div class="col-lg-10 col-lg-offset-2">
-            <a id="decode-button" class="btn btn-primary btn-lg">URL Decode</a>
-            <a id="encode-button" class="btn btn-success btn-lg">URL Encode</a>
+            <a id="decode-button" class="btn btn-primary btn-lg">Decode</a>
+            <a id="encode-button" class="btn btn-success btn-lg">Encode</a>
         </div>
     </div>
 
@@ -53,6 +56,17 @@
       </div>
     </div>
 
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- responsive -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-3917234898732362"
+         data-ad-slot="1503765273"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
     <!-- Encode URL-->
     <div class="form-group">
       <label for="textArea" class="col-lg-2 control-label">Encoded URL</label>
@@ -64,6 +78,12 @@
 
   </fieldset>
 </form>
+
+<div class="alert alert-dismissible alert-info">
+  <button type="button" class="close" data-dismiss="alert">×</button>
+  <strong>Thank you!!</strong> Please Bookmark
+</div>
+
 
 
 </body>

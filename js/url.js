@@ -33,3 +33,24 @@ $('#decode-button').on('click', function() {
     //Decoded URLの値を設定
     $('#decodedURL-text').val(decodeData);
 });
+
+$('#super-button').on('click', function() {
+
+    //URLフォームから値を取得
+    var URL = $('#URLForm').val()
+    console.log(URL)
+
+    //URLデコード
+    var decodeData = decodeURI(URL)
+    console.log(decodeData)
+
+    //Decoded URLの値を設定
+    $('#decodedURL-text').val(decodeData);
+
+    //URLエンコード
+    var encodeData = encodeURI(URL)
+    console.log(encodeData)
+
+    //Encoded URLの値を設定
+    $('#encodedURL-text').val(encodeData);
+});
