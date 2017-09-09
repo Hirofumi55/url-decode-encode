@@ -11,7 +11,7 @@ $('#encode-button').on('click', function () {
     console.log(URL)
 
     //URLエンコード
-    var encodeData = encodeURI(URL)
+    var encodeData = encodeURIComponent(URL)
     console.log(encodeData)
 
     //Encoded URLの値を設定
@@ -27,7 +27,7 @@ $('#decode-button').on('click', function () {
     console.log(URL)
 
     //URLデコード
-    var decodeData = decodeURI(URL)
+    var decodeData = decodeURIComponent(URL)
     console.log(decodeData)
 
     //Decoded URLの値を設定
@@ -41,14 +41,14 @@ $('#super-button').on('click', function () {
     console.log(URL)
 
     //URLデコード
-    var decodeData = decodeURI(URL)
+    var decodeData = decodeURIComponent(URL)
     console.log(decodeData)
 
     //Decoded URLの値を設定
     $('#decodedURL-text').val(decodeData);
 
     //URLエンコード
-    var encodeData = encodeURI(URL)
+    var encodeData = encodeURIComponent(URL)
     console.log(encodeData)
 
     //Encoded URLの値を設定
