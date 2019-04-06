@@ -1,67 +1,17 @@
-//URL Decode Encode
-//Hirofumi
-//2018/08/26
+var app = angular.module('App', []);
 
-
-//Encode URLがクリックで実行されるメソッド
-$('#encode-button').on('click', function () {
-
-    //URLフォームから値を取得
-    var URL = $('#URLForm').val()
-    console.log(URL)
-
-    //URLエンコード
-    var encodeData = encodeURIComponent(URL)
-    console.log(encodeData)
-
-    //Encoded URLの値を設定
-    $('#encodedURL-text').val(encodeData);
+app.controller('AppController', function($scope){
+    
+    $scope.URL = $('#URLForm').val();
+    
+    $scope.encodeURL = function() {
+        return encodeURIComponent($scope.URL);
+    };
+    
+    
+    $scope.decodeURL = function() {
+        return decodeURIComponent($scope.URL);
+    };
+    
 });
 
-
-//Decode URLがクリックで実行されるメソッド
-$('#decode-button').on('click', function () {
-
-    //URLフォームから値を取得
-    var URL = $('#URLForm').val()
-    console.log(URL)
-
-    //URLデコード
-    var decodeData = decodeURIComponent(URL)
-    console.log(decodeData)
-
-    //Decoded URLの値を設定
-    $('#decodedURL-text').val(decodeData)
-});
-
-$('#super-button').on('click', function () {
-
-    //URLフォームから値を取得
-    var URL = $('#URLForm').val()
-    console.log(URL)
-
-    //URLデコード
-    var decodeData = decodeURIComponent(URL)
-    console.log(decodeData)
-
-    //Decoded URLの値を設定
-    $('#decodedURL-text').val(decodeData);
-
-    //URLエンコード
-    var encodeData = encodeURIComponent(URL)
-    console.log(encodeData)
-
-    //Encoded URLの値を設定
-    $('#encodedURL-text').val(encodeData)
-});
-
-$('#clear-button').on('click', function () {
-
-    //アラートを表示
-    alert("フォームを削除してよろしいですか？")
-    //テキストボックスをすべて空にする
-    $('#URLForm').val("")
-    $('#encodedURL-text').val("")
-    $('#decodedURL-text').val("")
-
-})
